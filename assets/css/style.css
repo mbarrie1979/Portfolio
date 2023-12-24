@@ -1,7 +1,35 @@
-body {
-    background-color: maroon;
+:root {
+    --text-color: grey;
 }
+
+body {
+    background-color: rgb(121, 0, 0);
+}
+
+/* Name styling  */
 h1 {
-    color: grey;
+    color: var(--text-color);
     text-shadow:rgb(200, 16, 16) 3px .5px 2px;
+    font-size: 40px;
+}
+
+/* nav styling */
+ul a {
+   color: var(--text-color);
+   text-decoration: none;
+   margin: 20px;
+   font-size: 20px;
+}
+
+/* remove bullets */
+ul {
+    list-style-type: none;
+}
+
+/* position nav menu */
+.nav-text {
+    /* width: 20%; */
+    display: flex;
+    justify-content: flex-end;
+
 }
