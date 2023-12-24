@@ -1,3 +1,54 @@
+:root {
+    --text-color: grey;
+}
+
 body {
-    color: maroon;
+    background-color: rgb(1, 36, 110);
+}
+
+/* Name styling  */
+h1 {
+    color: var(--text-color);
+    text-shadow:rgb(0, 0, 0) 3px .5px 2px;
+    font-size: 40px;
+    margin-left: 2%;
+    letter-spacing: 5px;
+   
+}
+
+/* nav styling */
+ul a {
+   color: var(--text-color);
+   text-decoration: none;
+   margin: 20px;
+   font-size: 20px;
+   text-shadow:rgb(0, 0, 0) 3px .5px 2px;
+}
+
+/* remove bullets */
+ul {
+    list-style-type: none;
+}
+
+/* position nav menu */
+.nav-text {
+    /* width: 20%; */
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3%;
+    letter-spacing: 3px;
+
+}
+
+.about-me{
+    margin: 2%;
+    
+}
+
+h2 {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 4px;
+    text-shadow:rgb(0, 0, 0) 3px .5px 2px;
 }
