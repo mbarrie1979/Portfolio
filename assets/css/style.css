@@ -7,7 +7,6 @@
 
 body {
     background-color: var(--background-color)
-    
 }
 
 main {
@@ -75,7 +74,7 @@ h2 {
     width: 240px;
     height: 200px;
     margin-left: -60px;
-  
+
 }
 
 /* Gradient Div Surrounding Photo(About Me) */
@@ -94,7 +93,7 @@ h2 {
     display: flex;
     margin-left: 200px;
     width: 70%;
-    
+
 }
 
 .about-me-text {
@@ -106,7 +105,15 @@ h2 {
 
 .work-section {
     margin-top: 5px;
+    margin-left: 2%;
     height: 500px;
+    width: 96%;
     background: var(--background-gradient);
     border: solid var(--text-color)2px;
+}
+
+#app1 {
+    width: 200px;
+    height: 200px;
+    border: solid var(--text-color)1px;
 }
