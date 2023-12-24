@@ -1,28 +1,31 @@
 :root {
-    --text-color: grey;
+    --text-color: rgb(180, 150, 150);
+    --background-color: rgb(3, 3, 159);
+    --background-gradient: linear-gradient(to bottom, var(--background-color), rgb(43, 0, 90));
+
 }
 
 body {
-    background-color: rgb(1, 36, 110);
+    background-color: var(--background-color)
 }
 
 /* Name styling  */
 h1 {
     color: var(--text-color);
-    text-shadow:rgb(0, 0, 0) 3px .5px 2px;
+    text-shadow: rgb(0, 0, 0) 3px .5px 2px;
     font-size: 40px;
     margin-left: 2%;
     letter-spacing: 5px;
-   
+
 }
 
 /* nav styling */
 ul a {
-   color: var(--text-color);
-   text-decoration: none;
-   margin: 20px;
-   font-size: 20px;
-   text-shadow:rgb(0, 0, 0) 3px .5px 2px;
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 20px;
+    font-size: 20px;
+    text-shadow: rgb(0, 0, 0) 3px .5px 2px;
 }
 
 /* remove bullets */
@@ -40,9 +43,11 @@ ul {
 
 }
 
-.about-me{
+.about-me {
+    display: flex;
     margin: 2%;
-    
+
+
 }
 
 h2 {
@@ -50,5 +55,38 @@ h2 {
     text-align: center;
     font-size: 35px;
     letter-spacing: 4px;
-    text-shadow:rgb(0, 0, 0) 3px .5px 2px;
+    text-shadow: rgb(0, 0, 0) 3px .5px 2px;
+}
+
+#mark-image {
+    position: absolute;
+    border-radius: 100%;
+    width: 240px;
+    height: 200px;
+    margin-left: -60px;
+  
+}
+
+
+#image-section {
+    background: var(--background-gradient);
+    position: relative;
+    margin-bottom: -78px;
+    margin-left: 60px;
+    width: 90%;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+}
+
+.about-me-section {
+    display: flex;
+    margin-left: 200px;
+    width: 70%;
+}
+
+.about-me-text {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 20px;
+    text-shadow: rgb(0, 0, 0) 3px .5px 2px;
 }
