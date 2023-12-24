@@ -7,6 +7,12 @@
 
 body {
     background-color: var(--background-color)
+    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Name styling  */
@@ -43,9 +49,12 @@ ul {
 
 }
 
+/* About Me Section  */
 .about-me {
     display: flex;
     margin: 2%;
+    height: 225px;
+    border: solid var(--text-color)2px;
 
 
 }
@@ -58,6 +67,8 @@ h2 {
     text-shadow: rgb(0, 0, 0) 3px .5px 2px;
 }
 
+
+/* Photo CSS */
 #mark-image {
     position: absolute;
     border-radius: 100%;
@@ -67,21 +78,23 @@ h2 {
   
 }
 
-
+/* Gradient Div Surrounding Photo(About Me) */
 #image-section {
     background: var(--background-gradient);
     position: relative;
-    margin-bottom: -78px;
+    /* margin-bottom: 20px; */
     margin-left: 60px;
     width: 90%;
     border-top-left-radius: 10%;
     border-bottom-left-radius: 10%;
 }
 
+/* About Me Text Section  */
 .about-me-section {
     display: flex;
     margin-left: 200px;
     width: 70%;
+    
 }
 
 .about-me-text {
@@ -89,4 +102,11 @@ h2 {
     color: var(--text-color);
     font-size: 20px;
     text-shadow: rgb(0, 0, 0) 3px .5px 2px;
+}
+
+.work-section {
+    margin-top: 5px;
+    height: 500px;
+    background: var(--background-gradient);
+    border: solid var(--text-color)2px;
 }
