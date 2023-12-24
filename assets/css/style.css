@@ -1,3 +1,7 @@
 body {
-    color: maroon;
+    background-color: maroon;
+}
+h1 {
+    color: grey;
+    text-shadow:rgb(200, 16, 16) 3px .5px 2px;
 }
