@@ -12,7 +12,20 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    /* border: solid var(--text-color)2px; */
+    /* margin: 200px; */
+
+
 }
+
+header,
+footer {
+    margin-left: 2%;
+    border: solid var(--text-color)2px;
+    width: 95.8%;
+}
+
+
 
 /* Name styling  */
 h1 {
@@ -28,6 +41,7 @@ h1 {
 ul a {
     color: var(--text-color);
     text-decoration: none;
+    letter-spacing: 5px;
     margin: 20px;
     font-size: 20px;
     text-shadow: rgb(0, 0, 0) 3px .5px 2px;
@@ -38,12 +52,13 @@ ul {
     list-style-type: none;
 }
 
-/* position nav menu */
+/* position nav menu and footer */
 .nav-text {
-    /* width: 20%; */
+    /* position: absolute; */
     display: flex;
-    justify-content: flex-end;
-    margin-right: 3%;
+    height: 80px;
+    margin-left: 69%;
+    margin-top: -60px;
     letter-spacing: 3px;
 
 }
@@ -52,6 +67,7 @@ ul {
 .about-me {
     display: flex;
     margin: 2%;
+    letter-spacing: 2px;
     height: 225px;
     border: solid var(--text-color)2px;
 
@@ -62,7 +78,7 @@ h2 {
     color: var(--text-color);
     text-align: center;
     font-size: 35px;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
     text-shadow: rgb(0, 0, 0) 3px .5px 2px;
 }
 
@@ -81,8 +97,7 @@ h2 {
 #image-section {
     background: var(--background-gradient);
     position: relative;
-    /* margin-bottom: 20px; */
-    margin-left: 60px;
+    margin-right: 0px;
     width: 90%;
     border-top-left-radius: 10%;
     border-bottom-left-radius: 10%;
@@ -106,14 +121,44 @@ h2 {
 .work-section {
     margin-top: 5px;
     margin-left: 2%;
-    height: 500px;
+    height: 900px;
     width: 96%;
     background: var(--background-gradient);
     border: solid var(--text-color)2px;
 }
 
+.app-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 #app1 {
-    width: 200px;
+    width: 100%;
+    height: 300px;
+    border: solid var(--text-color)1px;
+}
+
+#app2,
+#app3,
+#app4,
+#app5 {
+    width: 40%;
     height: 200px;
     border: solid var(--text-color)1px;
+}
+
+footer {
+    margin-top: 40px
+}
+
+.contact-list {
+    /* width: 20%; */
+    display: flex;
+    /* justify-content: space-evenly */
+    flex-wrap: wrap;
+    position: absolute;
+    margin-left: 65%;
+    margin-top: -60px;
+    letter-spacing: 3px;
 }
