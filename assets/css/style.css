@@ -20,6 +20,7 @@ color palette 2
     --background-color: #023047;
     --background-gradient: linear-gradient(to bottom, #219EBC, var(--background-color));
     --text-shadow: #0A0F0D 0px 0px 1px;
+    --border-style: solid var(--text-color) 4px;
 
 }
 
@@ -31,10 +32,17 @@ body {
     background-color: var(--background-color)
 }
 
+#whole-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 /* Header, About Me, and Work sections */
 main {
     display: flex;
     flex-direction: column;
+    flex: 1;
     background: var(--background-gradient);
     /* border: solid var(--text-color)2px; */
     /* margin: 200px; */
@@ -44,8 +52,9 @@ main {
 
 header,
 footer {
+    /* position: relative; */
     margin-left: 2%;
-    /* border: solid var(--text-color)2px; */
+    border: solid var(--text-color) 4px;
     width: 95.8%;
 }
 
@@ -82,29 +91,33 @@ ul {
     /* position: absolute; */
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     height: 75px;
     margin-left: 50%;
-    margin-top: -20px;
+    margin-top: -60px;
     letter-spacing: 3px;
 
 }
 
+
+
+
 /* About Me Section  */
 .about-me {
     display: flex;
-    margin: 5%;
-    margin-bottom: 150px;
+    margin: 2%;
+    margin-bottom: 50px;
     letter-spacing: 2px;
-    height: 225px;
-    /* border: solid var(--text-color)2px; */
-
+    height: 320px;
+    border: solid var(--text-color) 4px;
 
 }
 
 h2 {
     font-size: 35px;
     letter-spacing: 6px;
-    text-shadow: var(--text-shadow)
+    text-shadow: var(--text-shadow);
+    margin-left: 20px;
 }
 
 
@@ -114,19 +127,10 @@ h2 {
     border-radius: 100%;
     width: 350px;
     height: 300px;
-    margin-left: -90px;
+    margin-left: -60px;
 
 }
 
-/* Gradient Div Surrounding Photo(About Me) */
-#image-section {
-    /* background: var(--background-gradient); */
-    position: relative;
-    margin-right: 0px;
-    width: 90%;
-    border-top-left-radius: 10%;
-    border-bottom-left-radius: 10%;
-}
 
 
 /* About Me Text Section  */
@@ -155,13 +159,33 @@ h2 {
     margin-left: 2%;
     height: 1100px;
     width: 96%;
-    /* border: solid var(--text-color)2px; */
+    border: solid var(--text-color) 4px;
 }
 
 .app-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+}
+
+.second-row {
+    display: flex;
+    flex-direction: row;
+    /* flex: 1, 0, 50px; */
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.third-row {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* flex: 1, 0, 50px; */
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 /* individual app section links  */
@@ -178,7 +202,8 @@ h2 {
 #app3,
 #app4,
 #app5 {
-    width: 42%;
+    flex: 1;
+    width: 46%;
     height: 300px;
     margin: 20px;
     overflow: hidden;
@@ -191,6 +216,7 @@ h2 {
 #app4 a,
 #app5 a,
 #app6 a {
+
     text-decoration: none;
 }
 
@@ -208,7 +234,7 @@ h2 {
 
 }
 
-#app-1-text-background,
+/* #app-1-text-background,
 #app-2-text-background,
 #app-3-text-background {
     background-color: #219EBC;
@@ -217,11 +243,12 @@ h2 {
     /* margin-left: 0px; */
 }
 
-#app-text-1,
+*/ #app-text-1,
 #app-text-2,
 #app-text-3 {
     /* height: 30px; */
     display: flex;
+    flex: 1;
     flex-direction: column;
     color: var(--text-color);
     position: absolute;
@@ -238,10 +265,13 @@ h2 {
 }
 
 #app-text-3 {
+    position: relative;
     margin: 0px;
-    margin-left: 700px;
+    margin-left: -100px;
+    width: 40%;
+    /* margin-right: 100px; */
     padding: 0px;
-    left: 150px;
+    left: 110px;
 
 }
 
@@ -275,7 +305,8 @@ h2 {
 }
 
 #led-image {
-    /* opacity: 20%; */
+    max-width: 100%;
+
 }
 
 #calculator-image {
@@ -286,23 +317,17 @@ h2 {
 }
 
 
-#app4 {
-    background-color: yellow;
+#puzzle-image {
+    max-width: 100%;
 }
 
-#app5 {
-    background-color: purple;
-}
 
-#app6 {
-    background-color: orange;
-}
 
 footer {
     margin-top: 35px;
     width: 100%;
-    margin-left: 0px;
-    background-color: #3CBBB1;
+    margin-left: -5px;
+    background-color: #8ECAE6;
     height: 100px;
 }
 
@@ -321,6 +346,6 @@ footer {
     flex-wrap: wrap;
     position: absolute;
     margin-left: 47%;
-    margin-top: -40px;
+    margin-top: -70px;
     letter-spacing: 1px;
 }
