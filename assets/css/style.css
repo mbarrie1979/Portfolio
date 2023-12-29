@@ -1,24 +1,69 @@
-:root {
-    --text-color: rgb(180, 150, 150);
-    --background-color: rgb(3, 3, 159);
-    --background-gradient: linear-gradient(to bottom, var(--background-color), rgb(43, 0, 90));
+/* color palette 1
+#EE4266
+#2A1E5C
+#0A0F0D
+#C4CBCA
+#3CBBB1
 
+color palette 2
+#FB8500
+#FFB703
+#023047
+#219EBC
+#8ECAE6
+*/
+
+
+
+:root {
+    --text-color: #023047;
+    --background-color: #023047;
+    --background-gradient: linear-gradient(to bottom, #219EBC, var(--background-color));
+    --text-shadow: #0A0F0D 0px 0px 1px;
+    --border-style: solid var(--text-color) 4px;
+
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: var(--background-color)
-    
 }
 
+#whole-page {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Header, About Me, and Work sections */
 main {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    background: var(--background-gradient);
+    /* border: solid var(--text-color)2px; */
+    /* margin: 200px; */
+
+
 }
+
+header,
+footer {
+    /* position: relative; */
+    margin-left: 2%;
+    border: solid var(--text-color) 4px;
+    width: 95.8%;
+}
+
+
 
 /* Name styling  */
 h1 {
     color: var(--text-color);
-    text-shadow: rgb(0, 0, 0) 3px .5px 2px;
+    text-shadow: var(--text-shadow) font-size: 40px;
     font-size: 40px;
     margin-left: 2%;
     letter-spacing: 5px;
@@ -29,9 +74,10 @@ h1 {
 ul a {
     color: var(--text-color);
     text-decoration: none;
+    letter-spacing: 5px;
     margin: 20px;
     font-size: 20px;
-    text-shadow: rgb(0, 0, 0) 3px .5px 2px;
+    text-shadow: var(--text-shadow)
 }
 
 /* remove bullets */
@@ -39,32 +85,39 @@ ul {
     list-style-type: none;
 }
 
-/* position nav menu */
+
+/* position nav menu and footer */
 .nav-text {
-    /* width: 20%; */
+    /* position: absolute; */
     display: flex;
-    justify-content: flex-end;
-    margin-right: 3%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 75px;
+    margin-left: 50%;
+    margin-top: -60px;
     letter-spacing: 3px;
 
 }
+
+
+
 
 /* About Me Section  */
 .about-me {
     display: flex;
     margin: 2%;
-    height: 225px;
-    border: solid var(--text-color)2px;
-
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    height: 320px;
+    border: solid var(--text-color) 4px;
 
 }
 
 h2 {
-    color: var(--text-color);
-    text-align: center;
     font-size: 35px;
-    letter-spacing: 4px;
-    text-shadow: rgb(0, 0, 0) 3px .5px 2px;
+    letter-spacing: 6px;
+    text-shadow: var(--text-shadow);
+    margin-left: 20px;
 }
 
 
@@ -72,41 +125,227 @@ h2 {
 #mark-image {
     position: absolute;
     border-radius: 100%;
-    width: 240px;
-    height: 200px;
+    width: 350px;
+    height: 300px;
     margin-left: -60px;
-  
+
 }
 
-/* Gradient Div Surrounding Photo(About Me) */
-#image-section {
-    background: var(--background-gradient);
-    position: relative;
-    /* margin-bottom: 20px; */
-    margin-left: 60px;
-    width: 90%;
-    border-top-left-radius: 10%;
-    border-bottom-left-radius: 10%;
-}
+
 
 /* About Me Text Section  */
 .about-me-section {
     display: flex;
     margin-left: 200px;
     width: 70%;
-    
+
+}
+
+#about-me h2,
+#work-section h2 {
+    color: var(--text-color);
 }
 
 .about-me-text {
     text-align: center;
+    margin-left: 100px;
     color: var(--text-color);
     font-size: 20px;
-    text-shadow: rgb(0, 0, 0) 3px .5px 2px;
+    text-shadow: var(--text-shadow)
 }
 
 .work-section {
     margin-top: 5px;
-    height: 500px;
-    background: var(--background-gradient);
-    border: solid var(--text-color)2px;
+    margin-left: 2%;
+    height: 1100px;
+    width: 96%;
+    border: solid var(--text-color) 4px;
+}
+
+.app-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+}
+
+.second-row {
+    display: flex;
+    flex-direction: row;
+    /* flex: 1, 0, 50px; */
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.third-row {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* flex: 1, 0, 50px; */
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* individual app section links  */
+
+#app1 {
+    /* display: flex; */
+    width: 100%;
+    height: 300px;
+    border: solid var(--text-color)1px;
+    overflow: hidden;
+}
+
+#app2,
+#app3,
+#app4,
+#app5 {
+    flex: 1;
+    width: 46%;
+    height: 300px;
+    margin: 20px;
+    overflow: hidden;
+    border: solid var(--text-color)1px;
+}
+
+#app1 a,
+#app2 a,
+#app3 a,
+#app4 a,
+#app5 a,
+#app6 a {
+
+    text-decoration: none;
+}
+
+/* surf report MERN stack text  */
+#app-text-1 {
+
+    left: 100px;
+
+}
+
+#app-text-1 h3 {
+    font-size: 30px;
+    position: absolute;
+    margin-top: -20px;
+
+}
+
+/* #app-1-text-background,
+#app-2-text-background,
+#app-3-text-background {
+    background-color: #219EBC;
+    margin-top: 20px;
+    height: 100px;
+    /* margin-left: 0px; */
+}
+
+*/ #app-text-1,
+#app-text-2,
+#app-text-3 {
+    /* height: 30px; */
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    color: var(--text-color);
+    position: absolute;
+
+
+}
+
+#app-text-2 {
+    margin: 0px;
+    margin-left: -20px;
+    padding: 0px;
+    left: 150px;
+
+}
+
+#app-text-3 {
+    position: relative;
+    margin: 0px;
+    margin-left: -100px;
+    width: 40%;
+    /* margin-right: 100px; */
+    padding: 0px;
+    left: 110px;
+
+}
+
+#led-wall {
+    z-index: 2;
+
+}
+
+#app-text-1 h2,
+#app-text-2 h2,
+#app-text-3 h2 {
+    margin-top: 10px;
+
+
+}
+
+#app-text-2 h3,
+#app-text-3 h3 {
+    font-size: 30px;
+    position: absolute;
+    /* z-index: 2; */
+    margin-top: -20px;
+
+}
+
+
+
+#surf-image {
+    max-width: 100%
+        /* min-height: 50%; */
+}
+
+#led-image {
+    max-width: 100%;
+
+}
+
+#calculator-image {
+    max-width: 200%;
+    margin-top: -150px;
+    margin-left: -200px;
+    z-index: 0;
+}
+
+
+#puzzle-image {
+    max-width: 100%;
+}
+
+
+
+footer {
+    margin-top: 35px;
+    width: 100%;
+    margin-left: -5px;
+    background-color: #8ECAE6;
+    height: 100px;
+}
+
+.contact-section {
+    height: 100px;
+}
+
+#contact-me {
+    margin-left: 20px;
+}
+
+.contact-list {
+    /* width: 20%; */
+    display: flex;
+    /* justify-content: space-evenly */
+    flex-wrap: wrap;
+    position: absolute;
+    margin-left: 47%;
+    margin-top: -70px;
+    letter-spacing: 1px;
 }
